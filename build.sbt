@@ -2,6 +2,8 @@ scriptedLaunchOpts ++= Seq(
   "-Xmx4G"
 )
 
-Test / test := (Test / g8Test).toTask("").value
+autoScalaLibrary := false
+
+ScriptedPlugin.globalSettings
 
 scriptedBufferLog := false
